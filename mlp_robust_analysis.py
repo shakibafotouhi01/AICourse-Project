@@ -23,7 +23,7 @@ DATASET = ['CIFAR10','FashionMNIST']
 # --- 2. SETUP AND PARAMETER DEFINITION ---
 BATCH_SIZE = 64
 LEARNING_RATE = 0.001
-EPOCHS = 30
+EPOCHS = 10
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # --- 3. Loading and Normalizing data
@@ -308,4 +308,5 @@ if __name__ == '__main__':
     # ---- Most difficult class across runs ----
     most_difficult = min(mean_class_accuracies, key=mean_class_accuracies.get)
     print(f"\n Most Difficult Class Across All Runs: **{most_difficult}** "
+
           f"(Mean Accuracy: {mean_class_accuracies[most_difficult]:.2f}%)")
