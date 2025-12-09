@@ -21,7 +21,7 @@ DATASET = ['CIFAR10','FashionMNIST']
 # --- 2. SETUP AND PARAMETER DEFINITION ---
 BATCH_SIZE = 64
 LEARNING_RATE = 0.001
-EPOCHS = 30
+EPOCHS = 10
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # --- 3. Loading and Normalizing data
@@ -150,4 +150,5 @@ if __name__ == '__main__':
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=LEARNING_RATE)
     train_model(net, trainloader, criterion, optimizer, DEVICE, EPOCHS)
+
     evaluate_model(net, testloader, CLASSES, DEVICE)
