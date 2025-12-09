@@ -1,0 +1,13 @@
+# Core PyTorch and Torchvision for Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Numerical Operations (used by PyTorch internally and explicitly for data handling)
+numpy>=1.24.0
+
+# Plotting and Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine Learning Metrics (Crucial for confusion_matrix and final evaluation)
+scikit-learn>=1.2.0
