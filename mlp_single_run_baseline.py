@@ -139,7 +139,7 @@ def evaluate_model(net, testloader, classes, device):
 
     if class_accuracies:
         most_difficult_class = min(class_accuracies, key=class_accuracies.get)
-        print(f'\n🔥 The **most difficult class** to classify is: **{most_difficult_class}** (Accuracy: {class_accuracies[most_difficult_class]:.2f} %)')
+        print(f'\n The **most difficult class** to classify is: **{most_difficult_class}** (Accuracy: {class_accuracies[most_difficult_class]:.2f} %)')
 
 
 # --- 7. EXECUTION ---
@@ -152,3 +152,4 @@ if __name__ == '__main__':
     train_model(net, trainloader, criterion, optimizer, DEVICE, EPOCHS)
 
     evaluate_model(net, testloader, CLASSES, DEVICE)
+
